@@ -13,7 +13,25 @@
     "Patch": 0
   },
   "demands": [],
-  "inputs": [
+  "inputs": [{
+      "name": "ConnectedServiceName",
+      "type": "connectedService:AzureRM",
+      "label": "Azure subscription",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Select the Azure Resource Manager subscription for the deployment."
+    },
+    {
+      "name": "WebAppName",
+      "type": "pickList",
+      "label": "App Service name",
+      "defaultValue": "",
+      "required": true,
+      "properties": {
+        "EditableOptions": "True"
+      },
+      "helpMarkDown": "Enter or Select the name of an existing Azure App Service."
+    },
     {
       "name": "name",
       "type": "string",
@@ -21,6 +39,20 @@
       "defaultValue": "World",
       "required": "true",
       "helpMarkDown": "A name. Enter `no one` if you're Arya Stark."
+    }
+  ],
+  "dataSourceBindings": [{
+      "target": "WebAppName",
+      "endpointId": "$(ConnectedServiceName)",
+      "dataSourceName": "AzureRMWebAppNames"
+    },
+    {
+      "target": "ResourceGroupName",
+      "endpointId": "$(ConnectedServiceName)",
+      "dataSourceName": "AzureRMWebAppResourceGroup",
+      "parameters": {
+        "WebAppName": "$(WebAppName)"
+      }
     }
   ],
   "instanceNameFormat": "Hello $(name)",
