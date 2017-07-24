@@ -128,7 +128,7 @@ gulp.task('pester-test', ['pre-test'], function (done) {
 
 gulp.task('default', ['test']);
 
-gulp.task('package', ['test'], function (done) {
+gulp.task('package',['pre-test'], function (done) {
   getNodeDependencies(function () {
     // TODO We need a per task dependency copy
     copyNodeModulesToTasks(function () {

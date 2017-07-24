@@ -20,6 +20,7 @@
     "shelljs": "^0.7.0"
   },
   "dependencies": {
+    "eslint-config-defaults": "^9.0.0",
     "vsts-task-lib": "^0.8.2"
   }
 }

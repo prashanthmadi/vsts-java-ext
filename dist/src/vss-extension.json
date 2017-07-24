@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "extensionId": "azure-java-deploy",
   "name": "azure-java-deploy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "prashanthmadi",
   "description": "Best approach to deploy Java Application in Azure App Service",
   "public": false,
