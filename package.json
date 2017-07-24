@@ -1,0 +1,25 @@
+{
+  "name": "azure-java-deploy",
+  "version": "0.0.0",
+  "description": "Best approach to deploy Java Application in Azure App Service",
+  "homepage": "https://prmadi.com/",
+  "author": {
+    "name": "prashanthmadi"
+  },
+  "files": [],
+  "main": "",
+  "keywords": [],
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-util": "^3.0.7",
+    "shelljs": "^0.7.0"
+  },
+  "dependencies": {
+    "vsts-task-lib": "^0.8.2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "5a41d341-28f2-438d-8a2d-9f322387145d",
+  "name": "azure-java-deploy",
+  "friendlyName": "Deploy Azure Java App",
+  "description": "Deploy Azure Java App",
+  "helpMarkdown": "### TODO Write help content",
+  "category": "Build",
+  "visibility": [],
+  "author": "Prashanth Madi",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "demands": [],
+  "inputs": [
+    {
+      "name": "name",
+      "type": "string",
+      "label": "A name",
+      "defaultValue": "World",
+      "required": "true",
+      "helpMarkDown": "A name. Enter `no one` if you're Arya Stark."
+    }
+  ],
+  "instanceNameFormat": "Hello $(name)",
+  "execution": {
+    "Node": {
+      "target": "task.js",
+      "argumentFormat": ""
+    }
+  }
+}
